@@ -16,7 +16,7 @@ import {
   ProfileIcon,
   ChevronRightIcon,
   CustomAvatarIcon
-} from './components/Icons';
+} from './components/Icons.tsx';
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState('Mine');
@@ -153,7 +153,7 @@ const App: React.FC = () => {
       {/* Modal Overlay */}
       {modalStep !== null && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-6">
-          <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px]" onClick={() => {}}></div>
+          <div className="absolute inset-0 bg-black/20 backdrop-blur-[1px]" onClick={() => {}}></div>
           <div className="bg-white w-full max-w-[340px] rounded-[24px] shadow-2xl z-[110] p-6 relative animate-in zoom-in-95 duration-200" dir="rtl">
             {renderModalContent()}
           </div>
@@ -161,7 +161,7 @@ const App: React.FC = () => {
       )}
 
       {/* Main Content */}
-      <div className={`${modalStep !== null ? 'blur-[1px] select-none pointer-events-none' : ''}`}>
+      <div className={`${modalStep !== null ? 'blur-[0.5px] select-none pointer-events-none' : ''}`}>
         {/* Header Section */}
         <div 
           className="w-full pt-8 pb-4 px-5 text-white"
